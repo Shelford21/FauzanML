@@ -1,10 +1,10 @@
 # Laporan Proyek Machine Learning
 
-### Nama : Fauzan Fadhillah Arisandi {#nama--fauzan-fadhillah-arisandi}
+### Nama : Fauzan Fadhillah Arisandi
 
-### Nim : 211351055 {#nim--211351055}
+### Nim : 211351055
 
-### Kelas : Pagi B {#kelas--pagi-b}
+### Kelas : Pagi B
 
 ## Domain Proyek
 
