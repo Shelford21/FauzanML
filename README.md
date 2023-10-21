@@ -49,7 +49,7 @@ Menjelaskan tujuan dari pernyataan masalah:
 
 \[Laptop Prices
 Dataset\]\[<https://www.kaggle.com/datasets/anubhavgoyal10/laptop-prices-dataset/data>)
-:::
+
 
 
 Mengimpor Library yang dibutuhkan yakni matplotlib , seaborn ,pandas dan
@@ -61,64 +61,41 @@ import seaborn as sns
 import pandas as pd
 import numpy as np
 ```
-:::
 
-::: {.cell .markdown}
-membaca data csv
-:::
-
-::: {.cell .code}
+Membaca data csv
 ``` python
 df = pd.read_csv('laptopPrices/laptopPrice.csv')
 df.head()
 ```
-:::
 
-::: {.cell .markdown}
 Memeriksa berapa baris dan kolom
-:::
 
-::: {.cell .code}
 ``` python
 
 df.shape
 ```
-:::
 
-::: {.cell .markdown}
 memeriksa apakah ada nilai null/NaN pada dataset
-:::
 
-::: {.cell .code}
 ``` python
 
 df.isna().sum()
 ```
-:::
 
-::: {.cell .markdown}
 Mengetahui deskripsi pada data
-:::
 
-::: {.cell .code}
 ``` python
 
 df.describe()
 ```
-:::
 
-::: {.cell .code}
 ``` python
 df.info()
 ```
-:::
 
-::: {.cell .markdown}
 Menemukan duplikasi baris,lalu di hilangkan , lalu menunjukan hasil
 setelah di hilangkan/di drop
-:::
 
-::: {.cell .code}
 ``` python
 
 df.duplicated().sum()
@@ -127,9 +104,7 @@ df= df.drop_duplicates()
 
 df.shape
 ```
-:::
 
-::: {.cell .markdown}
 ### Variabel-variabel pada Laptop Prices Dataset adalah sebagai berikut:
 
 -   brand : Merupakan merek laptop \[Contoh: Asus,Lenovo\]
@@ -164,21 +139,15 @@ df.shape
     laptop \[Contoh: 14,739\]
 -   Number of Reviews : Merupakan berapa kali dilakukan ulasan pada
     laptop \[Contoh: 100,19\]
-:::
 
-::: {.cell .markdown}
 Mengetahui harga laptop berdasarkan Brand
-:::
 
-::: {.cell .code}
 ``` python
 
 df['brand'].value_counts()
 sns.barplot(data = df , x=df['brand'],y=df['Price'])
 ```
-:::
 
-::: {.cell .markdown}
 ## Data Preparation
 
 Untuk menyiapkan data yang akhirnya akan dijadikan model . perlu di
@@ -186,23 +155,17 @@ lakukan konversi data kategorikal ke data numerikal. Langkah - langkah
 yang perlu dilakukan adalah: 1.Memilih kolom/Atribut data yang
 krusial/penting yang berguna di dalam memprediksi harga 2.Merubah isi
 kolom tipe data kategorikal tersebut ke tipe data numerikal
-:::
 
-::: {.cell .markdown}
 ## Menunjukan nilai unik pada kolom yang krusial dalam memprediksi harga
 
 Yakni kolom
 brand,processor_brand,processor_name,processor_gnrtn,ram_gb,ram_type,ssd,hdd,os,os_bit,graphic_card_gb
-:::
 
-::: {.cell .code}
 ``` python
 tdk_perlu = ['weight','warranty','rating','Number of Ratings','Number of Reviews']
 df = df.drop(columns=tdk_perlu)
 ```
-:::
 
-::: {.cell .code}
 ``` python
 df['brand'].unique()
 ```
