@@ -1,6 +1,6 @@
 import pickle
 import streamlit as st
-import sklearn
+
 model = pickle.load(open('laptop-prices.sav', 'rb'))
 
 
