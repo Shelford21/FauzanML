@@ -331,4 +331,5 @@ import pickle
 filename = 'laptop-prices.sav'
 pickle.dump(lr,open(filename,'wb'))
 ```
-[link pada streamlit](localhost:8501/?param=value)
+
+[linkStreamlit](localhost:8501/?param=value)
