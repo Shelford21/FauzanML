@@ -169,33 +169,23 @@ df = df.drop(columns=tdk_perlu)
 ``` python
 df['brand'].unique()
 ```
-:::
 
-::: {.cell .code}
 ``` python
 df['processor_brand'].unique()
 ```
-:::
 
-::: {.cell .code}
 ``` python
 df['processor_name'].unique()
 ```
-:::
 
-::: {.cell .code}
 ``` python
 df['processor_gnrtn'].unique()
 ```
-:::
 
-::: {.cell .code}
 ``` python
 df['ram_gb'].unique()
 ```
-:::
 
-::: {.cell .code}
 ``` python
 df['ram_type'].unique()
 ```
@@ -205,50 +195,34 @@ df['ram_type'].unique()
 ``` python
 df['hdd'].unique()
 ```
-:::
 
-::: {.cell .code}
 ``` python
 df['ssd'].unique()
 ```
-:::
 
-::: {.cell .code}
 ``` python
 df['os'].unique()
 ```
-:::
 
-::: {.cell .code}
 ``` python
 df['os_bit'].unique()
 ```
-:::
 
-::: {.cell .code}
 ``` python
 df['graphic_card_gb'].unique()
 ```
-:::
 
-::: {.cell .code}
 ``` python
 df['Touchscreen'].unique()
 ```
-:::
 
-::: {.cell .code}
 ``` python
 df['msoffice'].unique()
 ```
-:::
 
-::: {.cell .markdown}
 Merubah Nilai kategorikal ke nilai numerikal pada kolom
 brand,processor_brand,processor_name,processor_gnrtn,ram_gb,ram_type,ssd,hdd,os,os_bit,graphic_card_gb
-:::
 
-::: {.cell .code}
 ``` python
 
 df['brand'].replace(['ASUS', 'Lenovo','acer','Avita','HP','DELL','MSI','APPLE'],[0,1,2,3,4,5,6,7], inplace=True)
@@ -265,91 +239,59 @@ df['graphic_card_gb'].replace(['0 GB', '2 GB', '4 GB', '6 GB', '8 GB'],[0,2,4,6,
 df['Touchscreen'].replace(['No', 'Yes'],[0,1], inplace=True)
 df['msoffice'].replace(['No', 'Yes'],[0,1], inplace=True)
 ```
-:::
 
-::: {.cell .code}
 ``` python
 corr_matrix = df.corr()
 plt.figure(figsize=(10,10))
 sns.heatmap(corr_matrix, annot=True)
 plt.show()
 ```
-:::
 
-::: {.cell .markdown}
 Menunjukan kolom setelah di replace
-:::
 
-::: {.cell .code}
 ``` python
 df.head()
 ```
-:::
 
-::: {.cell .markdown}
 ## Modeling
-:::
 
-::: {.cell .markdown}
 Mengimpor train_test_split dari library sklearn dan Mengimpor
 LinearRegression dari library sklearn
-:::
 
-::: {.cell .code}
 ``` python
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 ```
-:::
 
-::: {.cell .markdown}
 menyingkatkan LinearRegression menjadi variable lr
-:::
 
-::: {.cell .code}
 ``` python
 lr = LinearRegression()
 ```
-:::
 
-::: {.cell .markdown}
 setelah sebelum nya sudah ditentukan kolom/atribut yang krusial , lalu
 drop kolom Price (Yakni Variable dependen) pada dataframe
-:::
 
-::: {.cell .code}
 ``` python
 X = df.drop(['Price'], axis=1)
 ```
-:::
 
-::: {.cell .markdown}
 Masukan kolom Price pada variable y
-:::
 
-::: {.cell .code}
 ``` python
 y = df['Price']
 ```
-:::
 
-::: {.cell .markdown}
 lakukan split data , untuk data train dan data test. (Disini saya
 masukan data test 25% dan data train 75 %)
-:::
 
-::: {.cell .code}
 ``` python
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25, random_state=42)
 ```
-:::
 
-::: {.cell .markdown}
 Membuat Regresi Linier
-:::
 
-::: {.cell .code}
 ``` python
 
 lr.fit(X_train,y_train)
@@ -357,21 +299,15 @@ pred = lr.predict(X_test)
 score = lr.score(X_test,y_test)
 print('Akurasi model regresi linier = ') ,score 
 ```
-:::
 
-::: {.cell .markdown}
 Dari regresi linier menghasilkan akurasi 71%
-:::
 
-::: {.cell .code}
 ``` python
 input_data = np.array([[1,1,2,10,3,3,1024,512,1,64,2,1,1]])
 prediction = lr.predict(input_data)
 print('Prediksi Harga Laptop: ', prediction)
 ```
-:::
 
-::: {.cell .code}
 ``` python
 from sklearn.metrics import r2_score
 r2_DT = r2_score(y_test, pred)  
@@ -379,21 +315,15 @@ r2_DT
 
 print(f"Precision = {r2_DT}")
 ```
-:::
 
-::: {.cell .markdown}
 ## Evaluation
 
 R-squared (R2) adalah ukuran statistik yang mewakili proporsi varians
 suatu variabel terikat yang dijelaskan oleh variabel bebas dalam model
 regresi.
-:::
 
-::: {.cell .markdown}
 ![image.png](vertopal_f79290feab8f4f2cbab7e9c0afe19f53/image.png)
-:::
 
-::: {.cell .code}
 ``` python
 from sklearn.metrics import r2_score
 r2_DT = r2_score(y_test, pred)  
@@ -401,26 +331,15 @@ r2_DT
 
 print(f"Precision = {r2_DT}")
 ```
-:::
 
-::: {.cell .markdown}
 didapatkan score 71% , sehingga dinyatakan bahwa variable dependen
 dengan variable independen itu berkolerasi tinggi
-:::
 
-::: {.cell .markdown}
 ## Deployment
-:::
 
-::: {.cell .code}
 ``` python
 import pickle
 filename = 'laptop-prices.sav'
 pickle.dump(lr,open(filename,'wb'))
 ```
-:::
-
-::: {.cell .code}
-``` python
-```
-:::
+[link pada streamlit](localhost:8501/?param=value)
