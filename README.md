@@ -189,9 +189,7 @@ df['ram_gb'].unique()
 ``` python
 df['ram_type'].unique()
 ```
-:::
 
-::: {.cell .code}
 ``` python
 df['hdd'].unique()
 ```
