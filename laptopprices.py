@@ -53,4 +53,4 @@ if st.button('Estimasi Harga'):
     predict = model.predict(
         [[brand,processor_brand,processor_name,processor_gnrtn,ram_gb,ram_type,hdd,ssd,os,os_bit,graphic_card_gb,Touchscreen,msoffice]]
     )
-    st.write('Prediksi Harga Laptop : ', predict)
+    st.write('Prediksi Harga Laptop (Rupiah): ', predict*191)
