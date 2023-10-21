@@ -326,10 +326,4 @@ dengan variable independen itu berkolerasi tinggi
 
 ## Deployment
 
-``` python
-import pickle
-filename = 'laptop-prices.sav'
-pickle.dump(lr,open(filename,'wb'))
-```
-
-[linkStreamlit](localhost:8501/?param=value)
+[linkStreamlit](https://fauzanml-ambition.streamlit.app/)
