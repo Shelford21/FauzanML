@@ -237,14 +237,13 @@ df['graphic_card_gb'].replace(['0 GB', '2 GB', '4 GB', '6 GB', '8 GB'],[0,2,4,6,
 df['Touchscreen'].replace(['No', 'Yes'],[0,1], inplace=True)
 df['msoffice'].replace(['No', 'Yes'],[0,1], inplace=True)
 ```
-
+Menunjukan seberapa besar kolerasi nya
 ``` python
 corr_matrix = df.corr()
 plt.figure(figsize=(10,10))
 sns.heatmap(corr_matrix, annot=True)
 plt.show()
 ```
-
 Menunjukan kolom setelah di replace
 
 ``` python
@@ -304,14 +303,6 @@ Dari regresi linier menghasilkan akurasi 71%
 input_data = np.array([[1,1,2,10,3,3,1024,512,1,64,2,1,1]])
 prediction = lr.predict(input_data)
 print('Prediksi Harga Laptop: ', prediction)
-```
-
-``` python
-from sklearn.metrics import r2_score
-r2_DT = r2_score(y_test, pred)  
-r2_DT
-
-print(f"Precision = {r2_DT}")
 ```
 
 ## Evaluation
