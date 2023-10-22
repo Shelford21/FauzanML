@@ -50,7 +50,32 @@ Menjelaskan tujuan dari pernyataan masalah:
 \[Laptop Prices
 Dataset\]\[<https://www.kaggle.com/datasets/anubhavgoyal10/laptop-prices-dataset/data>)
 
+Pertama-tama saya upload kaggle.json untuk memiliki akses pada kaggle
 
+``` python
+from google.colab import files
+files.upload()
+```
+Selanjutnya membuat direktori dan permission pada skrip ini
+
+``` python
+!mkdir -p ~/.kaggle
+!cp kaggle.json ~/.kaggle/
+!chmod 600 ~/.kaggle/kaggle.json
+!ls ~/.kaggle
+```
+Lalu mendownload dataset tersebut
+
+``` python
+!kaggle datasets download -d anubhavgoyal10/laptop-prices-dataset/
+```
+Mengunzip dataset
+
+```python
+!mkdir laptop-prices-dataset
+!unzip laptop-prices-dataset.zip -d laptop-prices-dataset
+!ls laptop-prices-dataset
+```
 
 Mengimpor Library yang dibutuhkan yakni matplotlib , seaborn ,pandas dan
 numpy
@@ -64,7 +89,7 @@ import numpy as np
 
 Membaca data csv
 ``` python
-df = pd.read_csv('laptopPrices/laptopPrice.csv')
+df = pd.read_csv('laptop-prices-dataset/laptopPrice.csv')
 df.head()
 ```
 
