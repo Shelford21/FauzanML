@@ -7,9 +7,6 @@ model = pickle.load(open('laptop-prices.sav', 'rb'))
 st.title('Prediksi Harga Laptop')
 
 
-
-brand= st.number_input('Input Brand', value=None)
-st.write('[brand] 0=ASUS 1=Lenovo 2=Acer 3=Avita 4=HP 5=DELL 6=MSI 7=APPLE')
 brand = st.selectbox('Pilih Brand', ['ASUS', 'Lenovo','Acer','Avita','HP','DELL','MSI','APPLE'])
 if brand == 'ASUS':
     brand = 0
@@ -28,14 +25,55 @@ elif brand == 'MSI':
 elif brand == 'APPLE':
     brand = 7
 
-processor_brand= st.number_input('Input processor_brand', value=None)
-st.write('[Processor Brand] 0=Intel 1=AMD 2=M1')
+processor_brand = st.selectbox('Pilih Processor Brand', ['Intel', 'AMD','M1'])
+if processor_brand == 'Intel':
+    brand = 0
+elif processor_brand == 'AMD':
+    brand = 1
+elif processor_brand == 'M1':
+    brand = 2
 
-processor_name= st.number_input('Input processor_name', value=None)
-st.write('[Processor Name] 0=Core i3 1=Core i5 2=Celeron Dual 3=Ryzen 5 4=Core i7 5=Core i9 6=M1 7=Pentium Quad 8=Ryzen 3 9=Ryzen 7 10=Ryzen 9')
+processor_name = st.selectbox('Pilih processor_name', ['Core i3', 'Core i5','Celeron Dual','Ryzen 5','Core i7','Core i9','M1','Pentium Quad','Ryzen 3','Ryzen 7','Ryzen 9'])
+if processor_name == 'Core i3':
+    processor_name = 0
+elif processor_name == 'Core i5':
+    processor_name = 1
+elif processor_name == 'Celeron Dual':
+    processor_name = 2
+elif processor_name == 'Ryzen 5':
+    processor_name = 3
+elif processor_name == 'Core i7':
+    processor_name = 4
+elif processor_name == 'Core i9':
+    processor_name = 5
+elif processor_name == 'M1':
+    processor_name = 6
+elif processor_name == 'Pentium Quad':
+    processor_name = 7
+elif processor_name == 'Ryzen 3':
+    processor_name = 8
+elif processor_name == 'Ryzen 7':
+    processor_name = 9
+elif processor_name == 'Ryzen 9':
+    processor_name = 10
 
-processor_gnrtn= st.number_input('Input processor_gnrtn', value=None)
-st.write('[Processor Generation] 10=10th 0=Not Available 11=11th 7=7th 8=8th 9=9th 4=4th 12=12th')
+processor_gnrtn = st.selectbox('Pilih processor_gnrtn', ['Not Available', '10th','11th','7th','8th','9th','4th','12th'])
+if processor_gnrtn == 'Not Available':
+    processor_gnrtn = 0
+elif processor_gnrtn == '10th':
+    processor_gnrtn = 10
+elif processor_gnrtn == '11th':
+    processor_gnrtn = 11
+elif processor_gnrtn == '7th':
+    processor_gnrtn = 7
+elif processor_gnrtn == '8th':
+    processor_gnrtn = 8
+elif processor_gnrtn == '9th':
+    processor_gnrtn = 9
+elif processor_gnrtn == '4th':
+    processor_gnrtn = 4
+elif processor_gnrtn == '12th':
+    processor_gnrtn = 12
 
 ram_gb= st.number_input('Input ram_gb', value=None)
 st.write('[Ram GB] 4=4 GB 8=8 GB 16=16 GB 32=32 GB')
