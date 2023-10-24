@@ -7,31 +7,11 @@ model = pickle.load(open('laptop-prices.sav', 'rb'))
 st.title('Prediksi Harga Laptop')
 
 
-brand = st.selectbox('Pilih Brand', ['ASUS', 'Lenovo','Acer','Avita','HP','DELL','MSI','APPLE'])
-if brand == 'ASUS':
-    brand = 0
-elif brand == 'Lenovo':
-    brand = 1
-elif brand == 'Acer':
-    brand = 2
-elif brand == 'Avita':
-    brand = 3
-elif brand == 'HP':
-    brand = 4
-elif brand == 'DELL':
-    brand = 5
-elif brand == 'MSI':
-    brand = 6
-elif brand == 'APPLE':
-    brand = 7
+brand= st.number_input('Input Brand', value=None)
+st.write('[brand] 0=ASUS 1=Lenovo 2=Acer 3=Avita 4=HP 5=DELL 6=MSI 7=APPLE')
 
-processor_brand = st.selectbox('Pilih Processor Brand', ['Intel', 'AMD','M1'])
-if processor_brand == 'Intel':
-    brand = 0
-elif processor_brand == 'AMD':
-    brand = 1
-elif processor_brand == 'M1':
-    brand = 2
+processor_brand= st.number_input('Input processor_brand', value=None)
+st.write('[Processor Brand] 0=Intel 1=AMD 2=M1')
 
 processor_name= st.number_input('Input processor_name', value=None)
 st.write('[Processor Name] 0=Core i3 1=Core i5 2=Celeron Dual 3=Ryzen 5 4=Core i7 5=Core i9 6=M1 7=Pentium Quad 8=Ryzen 3 9=Ryzen 7 10=Ryzen 9')
