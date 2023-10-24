@@ -132,38 +132,38 @@ df.shape
 
 ### Variabel-variabel pada Laptop Prices Dataset adalah sebagai berikut:
 
--   brand : Merupakan merek laptop \[Contoh: Asus,Lenovo\]
--   processor_brand : Merupakan merek processor \[Contoh: Intel,AMD\]
--   processor_name : Merupakan nama processor \[Contoh: Core i3, Celeron
+-   brand : Merupakan merek laptop \[Bertipe:String ,Contoh: Asus,Lenovo\]
+-   processor_brand : Merupakan merek processor \[Bertipe:String , Contoh: Intel,AMD\]
+-   processor_name : Merupakan nama processor \[Bertipe:String , Contoh: Core i3, Celeron
     Dual\]
--   processor_gnrtn : Merupakan generasi processor \[Contoh: 10th,11th\]
--   ram_gb : Merupakan kapasitas memori jangka pendek \[Contoh: 4 GB, 8
+-   processor_gnrtn : Merupakan generasi processor \[Bertipe:String , Contoh: 10th,11th\]
+-   ram_gb : Merupakan kapasitas memori jangka pendek \[Bertipe:String , Contoh: 4 GB, 8
     GB\]
--   ram \_type : Merupakan tipe ram \[Contoh: DDR4,LPDDR4X\]
+-   ram \_type : Merupakan tipe ram \[Bertipe:String ,Contoh: DDR4,LPDDR4X\]
 -   ssd : Merupakan perangkat untuk menyimpan data yang dapat membaca
-    dan menulis data hingga 550 MB/s\[Contoh: 512 GB, 1024 GB\]
+    dan menulis data hingga 550 MB/s\[Bertipe:String ,Contoh: 512 GB, 1024 GB\]
 -   hdd : Merupakan perangkat untuk menyimpan data yang dapat membaca
-    dan menulis data hingga kecepatan rata-rata 60 MB/s \[Contoh: 1024
+    dan menulis data hingga kecepatan rata-rata 60 MB/s \[Bertipe:String ,Contoh: 1024
     GB\]
 -   os : Merupakan sistem operasi untuk mengelola memori komputer dan
-    proses-proses yang berjalan di komputer \[Contoh: Windows\]
--   os_bit : Merupakan satuan data sistem operasi \[contoh: 32-bit,
+    proses-proses yang berjalan di komputer \[Bertipe:String ,Contoh: Windows\]
+-   os_bit : Merupakan satuan data sistem operasi \[Bertipe:String ,contoh: 32-bit,
     64-bit\]
--   graphic_card_gb : Merupakan kapasitas kartu grafis \[Contoh: 2 GB, 4
+-   graphic_card_gb : Merupakan kapasitas kartu grafis \[Bertipe:String ,Contoh: 2 GB, 4
     GB\]
--   weight : Merupakan berat laptop \[Contoh: Casual\]
--   warranty : Merupakan garansi pada laptop \[Contoh: 1 year , 2
+-   weight : Merupakan berat laptop \[Bertipe:String ,Contoh: Casual\]
+-   warranty : Merupakan garansi pada laptop \[Bertipe:String ,Contoh: 1 year , 2
     years\]
--   Touchscreen : Merupakan tipe laptop dengan layar sentuh \[Contoh:
+-   Touchscreen : Merupakan tipe laptop dengan layar sentuh \[Bertipe:String ,Contoh:
     Yes, No\]
 -   msoffice : Merupakan microsoft office pada laptop yang tujuannya
-    meliputi mengolah data \[Contoh: Yes,No\]
--   Price : Merupakan harga laptop \[Contoh: 57990,76990\]
--   rating : Merupakan nilai pada laptop \[Contoh: 3 stars, 4 stars\]
+    meliputi mengolah data \[Bertipe:String ,Contoh: Yes,No\]
+-   Price : Merupakan harga laptop \[Bertipe:String ,Contoh: 57990,76990\]
+-   rating : Merupakan nilai pada laptop \[Bertipe:String ,Contoh: 3 stars, 4 stars\]
 -   Number of Ratings : Merupakan berapa kali dilakukan penilaian pada
-    laptop \[Contoh: 14,739\]
+    laptop \[Bertipe:String ,Contoh: 14,739\]
 -   Number of Reviews : Merupakan berapa kali dilakukan ulasan pada
-    laptop \[Contoh: 100,19\]
+    laptop \[Bertipe:String ,Contoh: 100,19\]
 
 Mengetahui harga laptop berdasarkan Brand
 
