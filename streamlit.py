@@ -33,71 +33,17 @@ elif processor_brand == 'AMD':
 elif processor_brand == 'M1':
     brand = 2
 
-processor_name = st.selectbox('Pilih Nama Processor', ['Core i3', 'Core i5','Celeron Dual','Ryzen 5','Core i7','Core i9','M1','Pentium Quad','Ryzen 3','Ryzen 7','Ryzen 9'])
-if processor_name == 'Core i3':
-    processor_name = 0
-elif processor_name == 'Core i5':
-    processor_name = 1
-elif processor_name == 'Celeron Dual':
-    processor_name = 2
-elif processor_name == 'Ryzen 5':
-    processor_name = 3
-elif processor_name == 'Core i7':
-    processor_name = 4
-elif processor_name == 'Core i9':
-    processor_name = 5
-elif processor_name == 'M1':
-    processor_name = 6
-elif processor_name == 'Pentium Quad':
-    processor_name = 7
-elif processor_name == 'Ryzen 3':
-    processor_name = 8
-elif processor_name == 'Ryzen 7':
-    processor_name = 9
-elif processor_name == 'Ryzen 9':
-    processor_name = 10
+processor_name= st.number_input('Input processor_name', value=None)
+st.write('[Processor Name] 0=Core i3 1=Core i5 2=Celeron Dual 3=Ryzen 5 4=Core i7 5=Core i9 6=M1 7=Pentium Quad 8=Ryzen 3 9=Ryzen 7 10=Ryzen 9')
 
-processor_gnrtn = st.selectbox('Pilih processor_gnrtn', ['Not Available', '10th','11th','7th','8th','9th','4th','12th'])
-if processor_gnrtn == 'Not Available':
-    processor_gnrtn = 0
-elif processor_gnrtn == '10th':
-    processor_gnrtn = 10
-elif processor_gnrtn == '11th':
-    processor_gnrtn = 11
-elif processor_gnrtn == '7th':
-    processor_gnrtn = 7
-elif processor_gnrtn == '8th':
-    processor_gnrtn = 8
-elif processor_gnrtn == '9th':
-    processor_gnrtn = 9
-elif processor_gnrtn == '4th':
-    processor_gnrtn = 4
-elif processor_gnrtn == '12th':
-    processor_gnrtn = 12
+processor_gnrtn= st.number_input('Input processor_gnrtn', value=None)
+st.write('[Processor Generation] 10=10th 0=Not Available 11=11th 7=7th 8=8th 9=9th 4=4th 12=12th')
 
-ram_gb = st.selectbox('Pilih Kapasitas RAM', ['4 GB','8 GB' , '16 GB' ,'32 GB'])
-if ram_gb == '4 GB':
-    ram_gb = 4
-elif ram_gb == '8 GB':
-    ram_gb = 8
-elif ram_gb == '16 GB':
-    ram_gb = 16
-elif ram_gb == '32 GB':
-    ram_gb = 32
+ram_gb= st.number_input('Input ram_gb', value=None)
+st.write('[Ram GB] 4=4 GB 8=8 GB 16=16 GB 32=32 GB')
 
-ram_type = st.selectbox('Pilih Tipe RAM', ['DDR4','LPDDR4','LPDDR4X','DDR5','DDR3','LPDDR3'])
-if ram_type == 'DDR4':
-    ram_type = 0
-elif ram_type == 'LPDDR4':
-    ram_type = 1
-elif ram_type == 'LPDDR4X':
-    ram_type = 2
-elif ram_type == 'DDR5':
-    ram_type = 3
-elif ram_type == 'DDR3':
-    ram_type = 4
-elif ram_type == 'LPDDR3':
-    ram_type = 5
+ram_type= st.number_input('Input ram_type', value=None)
+st.write('[Ram Type] 0=DDR4 1=LPDDR4 2=LPDDR4X 3=DDR5 4=DDR3 5=LPDDR3')
 
 hdd= st.number_input('Input hddd', value=None)
 st.write('[ssd] 1024=1024 GB    0=0 GB  512=512 GB  2048=2048 GB')
