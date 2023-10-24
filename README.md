@@ -42,8 +42,8 @@ Menjelaskan pernyataan masalah latar belakang:
 Menjelaskan tujuan dari pernyataan masalah:
 
 -   Membuat penelitian untuk dapat memprediksi harga laptop yang
-    dinginkan pembeli
--   Mendapatkan wawasan pada harga laptop brand lain
+    dinginkan pembeli (dengan regresi linier)
+-   Mendapatkan wawasan pada harga laptop brand lain (dengan menganalisis data)
 
 ## Data Understanding
 
