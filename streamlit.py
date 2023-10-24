@@ -25,8 +25,15 @@ elif brand == 'MSI':
 elif brand == 'APPLE':
     brand = 7
 
-processor_brand= st.number_input('Input processor_brand', value=None)
-st.write('[Processor Brand] 0=Intel 1=AMD 2=M1')
+
+processor_brand = st.selectbox('Pilih Processor Brand', ['Intel', 'AMD','M1'])
+if processor_brand == 'Intel':
+    brand = 0
+elif processor_brand == 'AMD':
+    brand = 1
+elif processor_brand == 'M1':
+    brand = 2
+
 
 processor_name= st.number_input('Input processor_name', value=None)
 st.write('[Processor Name] 0=Core i3 1=Core i5 2=Celeron Dual 3=Ryzen 5 4=Core i7 5=Core i9 6=M1 7=Pentium Quad 8=Ryzen 3 9=Ryzen 7 10=Ryzen 9')
