@@ -75,7 +75,7 @@ elif processor_gnrtn == '4th':
 elif processor_gnrtn == '12th':
     processor_gnrtn = 12
 
-ram_gb = st.selectbox('Pilih ram_gb', ['4 GB','8 GB' , '16 GB' ,'32 GB'])
+ram_gb = st.selectbox('Pilih Kapasitas RAM', ['4 GB','8 GB' , '16 GB' ,'32 GB'])
 if ram_gb == '4 GB':
     ram_gb = 4
 elif ram_gb == '8 GB':
@@ -85,9 +85,20 @@ elif ram_gb == '16 GB':
 elif ram_gb == '32 GB':
     ram_gb = 32
 
-ram_type= st.number_input('Input ram_type', value=None)
-st.write('[Ram Type] 0=DDR4 1=LPDDR4 2=LPDDR4X 3=DDR5 4=DDR3 5=LPDDR3')
-
+ram_type = st.selectbox('Pilih Tipe RAM', ['DDR4','LPDDR4','LPDDR4X','DDR5','DDR3','LPDDR3'])
+if ram_type == 'DDR4':
+    ram_type = 0
+elif ram_type == 'LPDDR4':
+    ram_type = 1
+elif ram_type == 'LPDDR4X':
+    ram_type = 2
+elif ram_type == 'DDR5':
+    ram_type = 3
+elif ram_type == 'DDR3':
+    ram_type = 4
+elif ram_type == 'LPDDR3':
+    ram_type = 5
+    
 hdd= st.number_input('Input hddd', value=None)
 st.write('[ssd] 1024=1024 GB    0=0 GB  512=512 GB  2048=2048 GB')
          
