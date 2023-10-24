@@ -99,69 +99,26 @@ elif ram_type == 'DDR3':
 elif ram_type == 'LPDDR3':
     ram_type = 5
 
-hdd = st.selectbox('Pilih HDD', ['1024 GB','0 GB' , '512 GB' ,'2048 GB'])
-if hdd == '1024 GB':
-    hdd = 1024
-elif hdd == '0 GB':
-    hdd = 0
-elif hdd == '512 GB':
-    hdd = 512
-elif hdd == '2048 GB':
-    hdd = 2048
-    
-ssd = st.selectbox('Pilih SSD', ['1024 GB','0 GB' , '512 GB' ,'2048 GB','128 GB', '3072 GB'])
-if ssd == '1024 GB':
-    ssd = 1024
-elif ssd == '0 GB':
-    ssd = 0
-elif ssd == '512 GB':
-    ssd = 512
-elif ssd == '2048 GB':
-    ssd = 2048
-elif ssd == '128 GB':
-    ssd = 128              
-elif ssd == '3072 GB':
-    ssd = 3072         
+hdd= st.number_input('Input hddd', value=None)
+st.write('[ssd] 1024=1024 GB    0=0 GB  512=512 GB  2048=2048 GB')
+         
+ssd= st.number_input('Input ssd', value=None)
+st.write('[ssd] 1024=1024 GB    0=0 GB  512=512 GB  2048=2048 GB 256=256 GB 128=128 GB  2048=2048 GB    3072=3072 GB')
+         
+os= st.number_input('Input os', value=None)
+st.write('[os] 0=Windows 1=DOS 2=Mac')
 
-os = st.selectbox('Pilih OS', ['Windows', 'DOS','Mac'])
-if os == 'Windows':
-    os = 0
-elif os == 'DOS':
-    os = 1
-elif os == 'Mac':
-    os = 2
+os_bit= st.number_input('Input os_bit', value=None)
+st.write('[os-bit] 64=64-bit 32=32-bit')
 
-os_bit= st.selectbox('Pilih bit OS', ['64-bit','32-bit'])
-if os_bit == '64-bit':
-    os_bit = 64
-elif os_bit == '32-bit':
-    os_bit = 32
+graphic_card_gb= st.number_input('Input graphic_car_gb', value=None)
+st.write('[Graphic Card gb] 0=0 GB 2=2 GB 4=4 GB 6=6 GB 8=8 GB')
 
-graphic_card_gb = st.selectbox('Pilih Kapasitas Graphic Card', ['0 GB', '2 GB','4 GB','6 GB','8 GB'])
-if graphic_card_gb == '0 GB':
-    graphic_card_gb = 0
-elif graphic_card_gb == '2 GB':
-    graphic_card_gb = 2
-elif graphic_card_gb == '4 GB':
-    graphic_card_gb = 4
-elif graphic_card_gb == '6 GB':
-    graphic_card_gb = 6
-elif graphic_card_gb == '8 GB':
-    graphic_card_gb = 8
+Touchscreen= st.number_input('Input Touchscreen', value=None)
+st.write('[Touchscreen] 0=No 1=Yes')
 
-
-Touchscreen = st.selectbox('Apakah Touchscreen', ['No','Yes'])
-if Touchscreen == 'No':
-    Touchscreen = 0
-elif Touchscreen == 'Yes':
-    Touchscreen = 1
-
-msoffice = st.selectbox('Apakah msoffice', ['No','Yes'])
-if msoffice == 'No':
-    msoffice = 0
-elif msoffice == 'Yes':
-    msoffice = 1
-
+msoffice= st.number_input('Input msoffice', value=None)
+st.write('[Touchscreen] 0=No 1=Yes')
 
 
 predict = ''
