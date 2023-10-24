@@ -131,17 +131,38 @@ elif os == 'DOS':
 elif os == 'Mac':
     os = 2
 
-os_bit= st.number_input('Input os_bit', value=None)
-st.write('[os-bit] 64=64-bit 32=32-bit')
+os _bit= st.selectbox('Pilih bit OS', ['64-bit','32-bit'])
+if os_bit == '64-bit':
+    os_bit = 64
+elif os_bit == '32-bit':
+    os_bit = 32
 
-graphic_card_gb= st.number_input('Input graphic_car_gb', value=None)
-st.write('[Graphic Card gb] 0=0 GB 2=2 GB 4=4 GB 6=6 GB 8=8 GB')
+graphic_card_gb = st.selectbox('Pilih Kapasitas Graphic Card', ['0 GB', '2 GB','4 GB','6 GB','8 GB'])
+if graphic_card_gb == '0 GB':
+    graphic_card_gb = 0
+elif graphic_card_gb == '2 GB':
+    graphic_card_gb = 2
+elif graphic_card_gb == '4 GB':
+    graphic_card_gb = 4
+elif graphic_card_gb == '6 GB':
+    graphic_card_gb = 6
+elif graphic_card_gb == '8 GB':
+    graphic_card_gb = 8
 
-Touchscreen= st.number_input('Input Touchscreen', value=None)
-st.write('[Touchscreen] 0=No 1=Yes')
 
-msoffice= st.number_input('Input msoffice', value=None)
-st.write('[Touchscreen] 0=No 1=Yes')
+Touchscreen = st.selectbox('Apakah Touchscreen', ['No','Yes'])
+if Touchscreen == 'No':
+    Touchscreen = 0
+elif Touchscreen == 'Yes':
+    Touchscreen = 1
+
+msoffice = st.selectbox('Apakah msoffice', ['No','Yes'])
+if msoffice == 'No':
+    msoffice = 0
+elif msoffice == 'Yes':
+    msoffice = 1
+
+
 
 predict = ''
 
