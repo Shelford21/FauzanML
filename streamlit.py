@@ -33,7 +33,7 @@ elif processor_brand == 'AMD':
 elif processor_brand == 'M1':
     brand = 2
 
-processor_name = st.selectbox('Pilih processor_name', ['Core i3', 'Core i5','Celeron Dual','Ryzen 5','Core i7','Core i9','M1','Pentium Quad','Ryzen 3','Ryzen 7','Ryzen 9'])
+processor_name = st.selectbox('Pilih Nama Processor', ['Core i3', 'Core i5','Celeron Dual','Ryzen 5','Core i7','Core i9','M1','Pentium Quad','Ryzen 3','Ryzen 7','Ryzen 9'])
 if processor_name == 'Core i3':
     processor_name = 0
 elif processor_name == 'Core i5':
