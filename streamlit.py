@@ -25,10 +25,13 @@ elif brand == 'MSI':
 elif brand == 'APPLE':
     brand = 7
 
-processor_brand= st.number_input('Input processor_brand', value=None)
-st.write('[Processor Brand] 0=Intel 1=AMD 2=M1')
-
-
+processor_brand = st.selectbox('Pilih Processor Brand', ['Intel', 'AMD','M1'])
+if processor_brand == 'Intel':
+    processor_brand = 0
+elif processor_brand == 'AMD':
+    processor_brand = 1
+elif processor_brand == 'M1':
+    processor_brand = 2
 
 processor_name = st.selectbox('Pilih Nama Processor', ['Core i3', 'Core i5','Celeron Dual','Ryzen 5','Core i7','Core i9','M1','Pentium Quad','Ryzen 3','Ryzen 7','Ryzen 9'])
 if processor_name == 'Core i3':
@@ -54,35 +57,111 @@ elif processor_name == 'Ryzen 7':
 elif processor_name == 'Ryzen 9':
     processor_name = 10
 
-processor_gnrtn= st.number_input('Input processor_gnrtn', value=None)
-st.write('[Processor Generation] 10=10th 0=Not Available 11=11th 7=7th 8=8th 9=9th 4=4th 12=12th')
+processor_gnrtn = st.selectbox('Pilih processor_gnrtn', ['Not Available', '10th','11th','7th','8th','9th','4th','12th'])
+if processor_gnrtn == 'Not Available':
+    processor_gnrtn = 0
+elif processor_gnrtn == '10th':
+    processor_gnrtn = 10
+elif processor_gnrtn == '11th':
+    processor_gnrtn = 11
+elif processor_gnrtn == '7th':
+    processor_gnrtn = 7
+elif processor_gnrtn == '8th':
+    processor_gnrtn = 8
+elif processor_gnrtn == '9th':
+    processor_gnrtn = 9
+elif processor_gnrtn == '4th':
+    processor_gnrtn = 4
+elif processor_gnrtn == '12th':
+    processor_gnrtn = 12
 
-ram_gb= st.number_input('Input ram_gb', value=None)
-st.write('[Ram GB] 4=4 GB 8=8 GB 16=16 GB 32=32 GB')
+ram_gb = st.selectbox('Pilih Kapasitas RAM', ['4 GB','8 GB' , '16 GB' ,'32 GB'])
+if ram_gb == '4 GB':
+    ram_gb = 4
+elif ram_gb == '8 GB':
+    ram_gb = 8
+elif ram_gb == '16 GB':
+    ram_gb = 16
+elif ram_gb == '32 GB':
+    ram_gb = 32
 
-ram_type= st.number_input('Input ram_type', value=None)
-st.write('[Ram Type] 0=DDR4 1=LPDDR4 2=LPDDR4X 3=DDR5 4=DDR3 5=LPDDR3')
+ram_type = st.selectbox('Pilih Tipe RAM', ['DDR4','LPDDR4','LPDDR4X','DDR5','DDR3','LPDDR3'])
+if ram_type == 'DDR4':
+    ram_type = 0
+elif ram_type == 'LPDDR4':
+    ram_type = 1
+elif ram_type == 'LPDDR4X':
+    ram_type = 2
+elif ram_type == 'DDR5':
+    ram_type = 3
+elif ram_type == 'DDR3':
+    ram_type = 4
+elif ram_type == 'LPDDR3':
+    ram_type = 5
 
-hdd= st.number_input('Input hddd', value=None)
-st.write('[ssd] 1024=1024 GB    0=0 GB  512=512 GB  2048=2048 GB')
-         
-ssd= st.number_input('Input ssd', value=None)
-st.write('[ssd] 1024=1024 GB    0=0 GB  512=512 GB  2048=2048 GB 256=256 GB 128=128 GB  2048=2048 GB    3072=3072 GB')
-         
-os= st.number_input('Input os', value=None)
-st.write('[os] 0=Windows 1=DOS 2=Mac')
+hdd = st.selectbox('Pilih HDD', ['1024 GB','0 GB' , '512 GB' ,'2048 GB'])
+if hdd == '1024 GB':
+    hdd = 1024
+elif hdd == '0 GB':
+    hdd = 0
+elif hdd == '512 GB':
+    hdd = 512
+elif hdd == '2048 GB':
+    hdd = 2048
+    
+ssd = st.selectbox('Pilih SSD', ['1024 GB','0 GB' , '512 GB' ,'2048 GB','128 GB', '3072 GB'])
+if ssd == '1024 GB':
+    ssd = 1024
+elif ssd == '0 GB':
+    ssd = 0
+elif ssd == '512 GB':
+    ssd = 512
+elif ssd == '2048 GB':
+    ssd = 2048
+elif ssd == '128 GB':
+    ssd = 128              
+elif ssd == '3072 GB':
+    ssd = 3072         
 
-os_bit= st.number_input('Input os_bit', value=None)
-st.write('[os-bit] 64=64-bit 32=32-bit')
+os = st.selectbox('Pilih OS', ['Windows', 'DOS','Mac'])
+if os == 'Windows':
+    os = 0
+elif os == 'DOS':
+    os = 1
+elif os == 'Mac':
+    os = 2
 
-graphic_card_gb= st.number_input('Input graphic_car_gb', value=None)
-st.write('[Graphic Card gb] 0=0 GB 2=2 GB 4=4 GB 6=6 GB 8=8 GB')
+os_bit= st.selectbox('Pilih bit OS', ['64-bit','32-bit'])
+if os_bit == '64-bit':
+    os_bit = 64
+elif os_bit == '32-bit':
+    os_bit = 32
 
-Touchscreen= st.number_input('Input Touchscreen', value=None)
-st.write('[Touchscreen] 0=No 1=Yes')
+graphic_card_gb = st.selectbox('Pilih Kapasitas Graphic Card', ['0 GB', '2 GB','4 GB','6 GB','8 GB'])
+if graphic_card_gb == '0 GB':
+    graphic_card_gb = 0
+elif graphic_card_gb == '2 GB':
+    graphic_card_gb = 2
+elif graphic_card_gb == '4 GB':
+    graphic_card_gb = 4
+elif graphic_card_gb == '6 GB':
+    graphic_card_gb = 6
+elif graphic_card_gb == '8 GB':
+    graphic_card_gb = 8
 
-msoffice= st.number_input('Input msoffice', value=None)
-st.write('[Touchscreen] 0=No 1=Yes')
+
+Touchscreen = st.selectbox('Apakah Touchscreen', ['No','Yes'])
+if Touchscreen == 'No':
+    Touchscreen = 0
+elif Touchscreen == 'Yes':
+    Touchscreen = 1
+
+msoffice = st.selectbox('Apakah msoffice', ['No','Yes'])
+if msoffice == 'No':
+    msoffice = 0
+elif msoffice == 'Yes':
+    msoffice = 1
+
 
 
 predict = ''
