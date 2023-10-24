@@ -131,7 +131,7 @@ elif os == 'DOS':
 elif os == 'Mac':
     os = 2
 
-os _bit= st.selectbox('Pilih bit OS', ['64-bit','32-bit'])
+os_bit= st.selectbox('Pilih bit OS', ['64-bit','32-bit'])
 if os_bit == '64-bit':
     os_bit = 64
 elif os_bit == '32-bit':
