@@ -24,8 +24,6 @@ elif brand == 'MSI':
     brand = 6
 elif brand == 'APPLE':
     brand = 7
-
-
 processor_brand = st.selectbox('Pilih Processor Brand', ['Intel', 'AMD','M1'])
 if processor_brand == 'Intel':
     brand = 0
