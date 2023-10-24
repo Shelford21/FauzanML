@@ -75,8 +75,15 @@ elif processor_gnrtn == '4th':
 elif processor_gnrtn == '12th':
     processor_gnrtn = 12
 
-ram_gb= st.number_input('Input ram_gb', value=None)
-st.write('[Ram GB] 4=4 GB 8=8 GB 16=16 GB 32=32 GB')
+ram_gb = st.selectbox('Pilih ram_gb', ['4 GB','8 GB' , '16 GB' ,'32 GB'])
+if ram_gb == '4 GB':
+    ram_gb = 4
+elif ram_gb == '8 GB':
+    ram_gb = 8
+elif ram_gb == '16 GB':
+    ram_gb = 16
+elif ram_gb == '32 GB':
+    ram_gb = 32
 
 ram_type= st.number_input('Input ram_type', value=None)
 st.write('[Ram Type] 0=DDR4 1=LPDDR4 2=LPDDR4X 3=DDR5 4=DDR3 5=LPDDR3')
