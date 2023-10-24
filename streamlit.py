@@ -109,7 +109,7 @@ elif hdd == '512 GB':
 elif hdd == '2048 GB':
     hdd = 2048
     
-ssd = st.selectbox('Pilih ssd', ['1024 GB','0 GB' , '512 GB' ,'2048 GB','128 GB', '3072 GB'])
+ssd = st.selectbox('Pilih SSD', ['1024 GB','0 GB' , '512 GB' ,'2048 GB','128 GB', '3072 GB'])
 if ssd == '1024 GB':
     ssd = 1024
 elif ssd == '0 GB':
@@ -168,6 +168,6 @@ predict = ''
 
 if st.button('Estimasi Harga'):
     predict = model.predict(
-        [[brand,processor_brand,processor_name,processor_gnrtn,ram_gb,ram_type,ssd,ssd,os,os_bit,graphic_card_gb,Touchscreen,msoffice]]
+        [[brand,processor_brand,processor_name,processor_gnrtn,ram_gb,ram_type,hdd,ssd,os,os_bit,graphic_card_gb,Touchscreen,msoffice]]
     )
     st.write('Prediksi Harga Laptop (Rupiah): ', predict*191)
