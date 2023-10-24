@@ -98,15 +98,38 @@ elif ram_type == 'DDR3':
     ram_type = 4
 elif ram_type == 'LPDDR3':
     ram_type = 5
+
+hdd = st.selectbox('Pilih HDD', ['1024 GB','0 GB' , '512 GB' ,'2048 GB'])
+if hdd == '1024 GB':
+    hdd = 1024
+elif hdd == '0 GB':
+    hdd = 0
+elif hdd == '512 GB':
+    hdd = 512
+elif hdd == '2048 GB':
+    hdd = 2048
     
-hdd= st.number_input('Input hddd', value=None)
-st.write('[ssd] 1024=1024 GB    0=0 GB  512=512 GB  2048=2048 GB')
-         
-ssd= st.number_input('Input ssd', value=None)
-st.write('[ssd] 1024=1024 GB    0=0 GB  512=512 GB  2048=2048 GB 256=256 GB 128=128 GB  2048=2048 GB    3072=3072 GB')
-         
-os= st.number_input('Input os', value=None)
-st.write('[os] 0=Windows 1=DOS 2=Mac')
+ssd = st.selectbox('Pilih ssd', ['1024 GB','0 GB' , '512 GB' ,'2048 GB','128 GB', '3072 GB'])
+if ssd == '1024 GB':
+    ssd = 1024
+elif ssd == '0 GB':
+    ssd = 0
+elif ssd == '512 GB':
+    ssd = 512
+elif ssd == '2048 GB':
+    ssd = 2048
+elif ssd == '128 GB':
+    ssd = 128              
+elif ssd == '3072 GB':
+    ssd = 3072         
+
+os = st.selectbox('Pilih OS', ['Windows', 'DOS','Mac'])
+if os == 'Windows':
+    os = 0
+elif os == 'DOS':
+    os = 1
+elif os == 'Mac':
+    os = 2
 
 os_bit= st.number_input('Input os_bit', value=None)
 st.write('[os-bit] 64=64-bit 32=32-bit')
@@ -124,6 +147,6 @@ predict = ''
 
 if st.button('Estimasi Harga'):
     predict = model.predict(
-        [[brand,processor_brand,processor_name,processor_gnrtn,ram_gb,ram_type,hdd,ssd,os,os_bit,graphic_card_gb,Touchscreen,msoffice]]
+        [[brand,processor_brand,processor_name,processor_gnrtn,ram_gb,ram_type,ssd,ssd,os,os_bit,graphic_card_gb,Touchscreen,msoffice]]
     )
     st.write('Prediksi Harga Laptop (Rupiah): ', predict*191)
