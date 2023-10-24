@@ -10,6 +10,23 @@ st.title('Prediksi Harga Laptop')
 
 brand= st.number_input('Input Brand', value=None)
 st.write('[brand] 0=ASUS 1=Lenovo 2=Acer 3=Avita 4=HP 5=DELL 6=MSI 7=APPLE')
+brand = st.selectbox('Pilih Brand', ['ASUS', 'Lenovo','Acer','Avita','HP','DELL','MSI','APPLE'])
+if brand == 'ASUS':
+    brand = 0
+else if brand == 'Lenovo':
+    brand = 1
+else if brand == 'Acer':
+    brand = 2
+else if brand == 'Avita':
+    brand = 3
+else if brand == 'HP':
+    brand = 4
+else if brand == 'DELL':
+    brand = 5
+else if brand == 'MSI':
+    brand = 6
+else if brand == 'APPLE':
+    brand = 7
 
 processor_brand= st.number_input('Input processor_brand', value=None)
 st.write('[Processor Brand] 0=Intel 1=AMD 2=M1')
