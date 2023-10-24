@@ -13,19 +13,19 @@ st.write('[brand] 0=ASUS 1=Lenovo 2=Acer 3=Avita 4=HP 5=DELL 6=MSI 7=APPLE')
 brand = st.selectbox('Pilih Brand', ['ASUS', 'Lenovo','Acer','Avita','HP','DELL','MSI','APPLE'])
 if brand == 'ASUS':
     brand = 0
-else if brand == 'Lenovo':
+elif brand == 'Lenovo':
     brand = 1
-else if brand == 'Acer':
+elif brand == 'Acer':
     brand = 2
-else if brand == 'Avita':
+elif brand == 'Avita':
     brand = 3
-else if brand == 'HP':
+elif brand == 'HP':
     brand = 4
-else if brand == 'DELL':
+elif brand == 'DELL':
     brand = 5
-else if brand == 'MSI':
+elif brand == 'MSI':
     brand = 6
-else if brand == 'APPLE':
+elif brand == 'APPLE':
     brand = 7
 
 processor_brand= st.number_input('Input processor_brand', value=None)
