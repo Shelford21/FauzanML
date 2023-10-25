@@ -37,7 +37,7 @@ Menjelaskan pernyataan masalah latar belakang:
     inginkan
 -   Perusahaan tidak dapat mengetahui harga laptop brand lain
 
-### Goals
+### Goals Dengan Solution Statements
 
 Menjelaskan tujuan dari pernyataan masalah:
 
