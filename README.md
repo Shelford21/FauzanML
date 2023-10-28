@@ -159,10 +159,12 @@ sns.barplot(data = df , x=df['brand'],y=df['Price'])
 
 ## Data Preparation
 
-Untuk menyiapkan data yang akhirnya akan dijadikan model .perlu di hilangkan data yang berisi null , perlu di
-lakukan konversi data kategorikal ke data numerikal. Langkah - langkah
-yang perlu dilakukan adalah: 1.Memilih kolom/Atribut data yang
-krusial/penting yang berguna di dalam memprediksi harga 2.Merubah isi
+Untuk menyiapkan data yang akhirnya akan dijadikan model .perlu di hilangkan data yang berisi null dan yang duplikasi .Lalu perlu di
+lakukan konversi data kategorikal ke data numerikal yaitu Langkah - langkah
+yang perlu dilakukan adalah: 
+1.Memilih kolom/Atribut data yang
+krusial/penting yang berguna di dalam memprediksi harga 
+2.Merubah isi
 kolom tipe data kategorikal tersebut ke tipe data numerikal
 
 Menemukan duplikasi baris,lalu di hilangkan , lalu menunjukan hasil
@@ -177,7 +179,7 @@ df= df.drop_duplicates()
 df.shape
 ```
 
-memeriksa apakah ada nilai null/NaN pada dataset
+Memeriksa apakah ada nilai null/NaN pada dataset
 
 ``` python
 
