@@ -100,13 +100,6 @@ Memeriksa berapa baris dan kolom
 df.shape
 ```
 
-memeriksa apakah ada nilai null/NaN pada dataset
-
-``` python
-
-df.isna().sum()
-```
-
 Mengetahui deskripsi pada data
 
 ``` python
@@ -118,17 +111,6 @@ df.describe()
 df.info()
 ```
 
-Menemukan duplikasi baris,lalu di hilangkan , lalu menunjukan hasil
-setelah di hilangkan/di drop
-
-``` python
-
-df.duplicated().sum()
-
-df= df.drop_duplicates()
-
-df.shape
-```
 
 ### Variabel-variabel pada Laptop Prices Dataset adalah sebagai berikut:
 
@@ -165,6 +147,8 @@ df.shape
 -   Number of Reviews : Merupakan berapa kali dilakukan ulasan pada
     laptop \[Bertipe:String ,Contoh: 100,19\]
 
+  
+
 Mengetahui harga laptop berdasarkan Brand
 
 ``` python
@@ -175,11 +159,30 @@ sns.barplot(data = df , x=df['brand'],y=df['Price'])
 
 ## Data Preparation
 
-Untuk menyiapkan data yang akhirnya akan dijadikan model . perlu di
+Untuk menyiapkan data yang akhirnya akan dijadikan model .perlu di hilangkan data yang berisi null , perlu di
 lakukan konversi data kategorikal ke data numerikal. Langkah - langkah
 yang perlu dilakukan adalah: 1.Memilih kolom/Atribut data yang
 krusial/penting yang berguna di dalam memprediksi harga 2.Merubah isi
 kolom tipe data kategorikal tersebut ke tipe data numerikal
+
+Menemukan duplikasi baris,lalu di hilangkan , lalu menunjukan hasil
+setelah di hilangkan/di drop
+
+``` python
+
+df.duplicated().sum()
+
+df= df.drop_duplicates()
+
+df.shape
+```
+
+memeriksa apakah ada nilai null/NaN pada dataset
+
+``` python
+
+df.isna().sum()
+```
 
 ## Menunjukan nilai unik pada kolom yang krusial dalam memprediksi harga
 
