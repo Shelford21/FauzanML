@@ -114,7 +114,7 @@ df.describe()
 ``` python
 df.info()
 ```
-![Uploading image.png…]()
+![image](https://github.com/Shelford21/FauzanML/assets/122199835/b937ecb4-82a6-4068-9c0d-bc3b03515314)
 
 
 ### Variabel-variabel pada Laptop Prices Dataset adalah sebagai berikut:
@@ -365,5 +365,6 @@ didapatkan score 71% , sehingga dinyatakan bahwa variable dependen
 dengan variable independen itu berkolerasi tinggi
 
 ## Deployment
+![Uploading image.png…]()
 
 [linkStreamlit](https://fauzanml-ambition.streamlit.app/)
