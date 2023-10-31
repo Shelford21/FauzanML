@@ -114,6 +114,7 @@ df.describe()
 ``` python
 df.info()
 ```
+![Uploading image.png…]()
 
 
 
