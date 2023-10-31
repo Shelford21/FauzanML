@@ -114,7 +114,6 @@ df.describe()
 ``` python
 df.info()
 ```
-![Uploading image.png…]()
 
 
 
@@ -163,6 +162,20 @@ df['brand'].value_counts()
 sns.barplot(data = df , x=df['brand'],y=df['Price'])
 ```
 ![image](https://github.com/Shelford21/FauzanML/assets/122199835/7818de54-3e0b-458b-a1c7-3b569cab7493)
+
+Mengetahui harga laptop berdasarkan merek processor
+```python
+sns.barplot(data=df,x=df['processor_brand'],y=df["Price"])
+```
+
+Mengetahui harga laptop berdasarkan nama processor
+```python
+plt.figure(figsize=(10,5))
+sns.barplot(data=df,x=df['processor_name'],y=df['Price'],hue=None)
+```
+![Uploading image.png…]()
+
+
 
 ## Data Preparation
 
