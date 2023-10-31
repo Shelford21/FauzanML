@@ -92,6 +92,8 @@ Membaca data csv
 df = pd.read_csv('laptop-prices-dataset/laptopPrice.csv')
 df.head()
 ```
+![image](https://github.com/Shelford21/FauzanML/assets/122199835/3c874ef8-84ee-43b7-b7d8-d796200e87e7)
+
 
 Memeriksa berapa baris dan kolom
 
@@ -106,10 +108,13 @@ Mengetahui deskripsi pada data
 
 df.describe()
 ```
+![image](https://github.com/Shelford21/FauzanML/assets/122199835/6c68556a-725e-42a5-be38-1ec018b976a6)
+
 
 ``` python
 df.info()
 ```
+![Uploading image.png…]()
 
 
 ### Variabel-variabel pada Laptop Prices Dataset adalah sebagai berikut:
@@ -156,6 +161,7 @@ Mengetahui harga laptop berdasarkan Brand
 df['brand'].value_counts()
 sns.barplot(data = df , x=df['brand'],y=df['Price'])
 ```
+![image](https://github.com/Shelford21/FauzanML/assets/122199835/7818de54-3e0b-458b-a1c7-3b569cab7493)
 
 ## Data Preparation
 
@@ -185,6 +191,8 @@ Memeriksa apakah ada nilai null/NaN pada dataset
 
 df.isna().sum()
 ```
+![image](https://github.com/Shelford21/FauzanML/assets/122199835/487890d2-11b4-46c5-9f85-ee5967c6c0e2)
+
 
 ## Menunjukan nilai unik pada kolom yang krusial dalam memprediksi harga
 
@@ -274,6 +282,8 @@ plt.figure(figsize=(10,10))
 sns.heatmap(corr_matrix, annot=True)
 plt.show()
 ```
+![output](https://github.com/Shelford21/FauzanML/assets/122199835/fda573d2-3830-46b5-8d85-8895c60a3336)
+
 Menunjukan kolom setelah di replace
 
 ``` python
