@@ -108,7 +108,7 @@ Mengetahui deskripsi pada data
 
 df.describe()
 ```
-![image](https://github.com/Shelford21/FauzanML/assets/122199835/6c68556a-725e-42a5-be38-1ec018b976a6)
+
 
 
 ``` python
@@ -192,7 +192,7 @@ Memeriksa apakah ada nilai null/NaN pada dataset
 
 df.isna().sum()
 ```
-
+![image](https://github.com/Shelford21/FauzanML/assets/122199835/6c68556a-725e-42a5-be38-1ec018b976a6)
 
 
 ## Menunjukan nilai unik pada kolom yang krusial dalam memprediksi harga
