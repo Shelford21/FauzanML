@@ -175,7 +175,8 @@ Mengetahui harga laptop berdasarkan nama processor
 plt.figure(figsize=(10,5))
 sns.barplot(data=df,x=df['processor_name'],y=df['Price'],hue=None)
 ```
-![Uploading image.png…]()
+![image](https://github.com/Shelford21/FauzanML/assets/122199835/0eb21af0-23ee-4716-afe3-1e487a567c89)
+
 
 
 
