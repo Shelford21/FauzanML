@@ -192,7 +192,7 @@ Memeriksa apakah ada nilai null/NaN pada dataset
 
 df.isna().sum()
 ```
-![image](https://github.com/Shelford21/FauzanML/assets/122199835/487890d2-11b4-46c5-9f85-ee5967c6c0e2)
+
 
 
 ## Menunjukan nilai unik pada kolom yang krusial dalam memprediksi harga
